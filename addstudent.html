@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body {
+            background-image: url("register1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 50%;
+            margin-left: 25%;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        font[color="red"] {
+            font-size: 14px;
+        }
+    </style>
+    <title>Project Management System</title>
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#D2691E">
+            <th width="74" scope="col">&nbsp;</th>
+            <th width="164" scope="col"><a href="../Admin.php"><img src="../logo1.png" alt="LOGO" /></a></th>
+            <th width="646" scope="col"><font size="8" color="White">Project Management System</font></th>
+            <th width="140" scope="col"><font color="White" size="5">
+                    <?php
+                    print $role;
+                    ?></font></th>
+            <th width="63" scope="col">&nbsp;</th>
+        </tr>
+    </table>
+
+    <h1>Add Student</h1>
+
+    <form method="post" action="./AddStudentServlet">
+        <table align="center">
+            <tr>
+                <td align="right"><label for="id">Student ID:</label></td>
+                <td><input type="text" id="id" name="id" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="stname">Name:</label></td>
+                <td><input type="text" id="stname" name="stname" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="stemail">Email:</label></td>
+                <td><input type="email" id="stemail" name="stemail" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="stphone">Phone:</label></td>
+                <td><input type="text" id="stphone" name="stphone" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="stpass">Password:</label></td>
+                <td><input type="password" id="stpass" name="stpass" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="styear">Year:</label></td>
+                <td><input type="text" id="styear" name="styear" required /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="stcourse">Branch:</label></td>
+                <td><input type="text" id="stcourse" name="stcourse" required /></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" name="add" value="Add" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
